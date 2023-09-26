@@ -1,6 +1,11 @@
 cattal - IAC automation and analysis tool
 =================
 
+oclif example Hello World CLI
+
+[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+[![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/hello-world/tree/main)
+[![GitHub license](https://img.shields.io/github/license/oclif/hello-world)](https://github.com/oclif/hello-world/blob/main/LICENSE)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -13,7 +18,7 @@ $ npm install -g cattal
 $ cattal COMMAND
 running command...
 $ cattal (--version)
-cattal/0.0.1 linux-x64 node-v18.13.0
+cattal/0.0.0 linux-x64 node-v18.13.0
 $ cattal --help [COMMAND]
 USAGE
   $ cattal COMMAND
@@ -22,10 +27,6 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`cattal cattal`](#cattal-cattal)
-* [`cattal cattal help`](#cattal-cattal-help)
-* [`cattal cattal list`](#cattal-cattal-list)
-* [`cattal cattal task [TASK]`](#cattal-cattal-task-task)
 * [`cattal hello PERSON`](#cattal-hello-person)
 * [`cattal hello world`](#cattal-hello-world)
 * [`cattal help [COMMANDS]`](#cattal-help-commands)
@@ -38,78 +39,7 @@ USAGE
 * [`cattal plugins:uninstall PLUGIN...`](#cattal-pluginsuninstall-plugin-1)
 * [`cattal plugins:uninstall PLUGIN...`](#cattal-pluginsuninstall-plugin-2)
 * [`cattal plugins update`](#cattal-plugins-update)
-
-## `cattal cattal`
-
-Say hello
-
-```
-USAGE
-  $ cattal cattal
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ cattal task -d <path to tasks>
-```
-
-_See code: [dist/commands/cattal/index.ts](https://github.com/Workspace/cattal/blob/v0.0.1/dist/commands/cattal/index.ts)_
-
-## `cattal cattal help`
-
-Display Cattal Help
-
-```
-USAGE
-  $ cattal cattal help
-
-DESCRIPTION
-  Display Cattal Help
-
-EXAMPLES
-  $ cattal cattal help
-  hello world! (./src/commands/hello/world.ts)
-```
-
-_See code: [dist/commands/cattal/help.ts](https://github.com/Workspace/cattal/blob/v0.0.1/dist/commands/cattal/help.ts)_
-
-## `cattal cattal list`
-
-describe the command here
-
-```
-USAGE
-  $ cattal cattal list [-d <value>]
-
-FLAGS
-  -d, --dir=<value>  Where to load tasks from
-
-DESCRIPTION
-  describe the command here
-```
-
-_See code: [dist/commands/cattal/list.ts](https://github.com/Workspace/cattal/blob/v0.0.1/dist/commands/cattal/list.ts)_
-
-## `cattal cattal task [TASK]`
-
-describe the command here
-
-```
-USAGE
-  $ cattal cattal task [TASK] [-d <value>]
-
-ARGUMENTS
-  TASK  a specific task to run
-
-FLAGS
-  -d, --dir=<value>  Where to load tasks from
-
-DESCRIPTION
-  describe the command here
-```
-
-_See code: [dist/commands/cattal/task.ts](https://github.com/Workspace/cattal/blob/v0.0.1/dist/commands/cattal/task.ts)_
+* [`cattal task [FILE]`](#cattal-task-file)
 
 ## `cattal hello PERSON`
 
@@ -133,7 +63,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/Workspace/cattal/blob/v0.0.1/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/Workspace/cattal/blob/v0.0.0/dist/commands/hello/index.ts)_
 
 ## `cattal hello world`
 
@@ -151,7 +81,7 @@ EXAMPLES
   hello world! (./src/commands/hello/world.ts)
 ```
 
-_See code: [dist/commands/hello/world.ts](https://github.com/Workspace/cattal/blob/v0.0.1/dist/commands/hello/world.ts)_
+_See code: [dist/commands/hello/world.ts](https://github.com/Workspace/cattal/blob/v0.0.0/dist/commands/hello/world.ts)_
 
 ## `cattal help [COMMANDS]`
 
@@ -418,27 +348,28 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.5.0/src/commands/plugins/update.ts)_
-<!-- commandsstop -->
-* [`cattal task`](#cattal-task)
-* [`cattal task [TASK]`](#cattal-task-name)
-* [`cattal list [COMMANDS]`](#cattal-list)
-* [`cattal help`](#cattal-help)
 
-## `cattal list`
+## `cattal task [FILE]`
 
-list tasks
+describe the command here
 
 ```
 USAGE
-  $ cattal list -d <path_to_tasks>
+  $ cattal task [FILE] [-n <value>] [-f]
+
+ARGUMENTS
+  FILE  file to read
 
 FLAGS
-  -d  (optional) Where the tasks to be executed are located, defaults to `pwd`
+  -f, --force
+  -n, --name=<value>  name to print
 
 DESCRIPTION
-  Say hello
+  describe the command here
 
 EXAMPLES
-  $ cattal list
-  taks_simple
+  $ cattal task
 ```
+
+_See code: [dist/commands/task.ts](https://github.com/Workspace/cattal/blob/v0.0.0/dist/commands/task.ts)_
+<!-- commandsstop -->
