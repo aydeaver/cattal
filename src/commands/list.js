@@ -1,11 +1,15 @@
 import { Command, Flags } from '@oclif/core'
 import * as path from 'path'
-import { Parser } from '../../classes/Parser'
+import { Parser } from '../classes/Parser'
 
 const taskDirectory = path.resolve() + '/tasks'
 
 export default class List extends Command {
-  static description = 'describe the command here'
+  static description = 'list all available tasks'
+
+  static examples = [
+    `<%= config.bin %> <%= command.id %>`,
+  ]
 
   static flags = {
     dir: Flags.string({ char: 'd', description: 'Where to load tasks from' })

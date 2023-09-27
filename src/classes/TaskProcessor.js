@@ -31,8 +31,8 @@ class TaskProcessor {
       this._execute(actions, args)
         .then(({ output, err }) => {
           console.log(`returned output: ${output}`)
-          console.log(`err: ${err}`)
-          console.log(taskDef)
+          // console.log(`err: ${err}`)
+          // console.log(taskDef)
           if (err) { throw new ExecutionError(taskName, 'Task has an invalid property:') }
         })
     }

@@ -1,44 +1,37 @@
 {
   "name": "cattal",
-  "version": "0.0.1",
-  "description": "oclif example Hello World CLI",
+  "version": "0.0.0",
+  "description": "IAC automation and analysis tool",
   "author": "Anthony Deaver",
   "bin": {
     "cattal": "./bin/run"
   },
-  "homepage": "https://github.com/Workspace/cattal",
+  "homepage": "https://github.com/aydeaver/cattal",
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": "Workspace/cattal",
+  "repository": "aydeaver/cattal",
   "files": [
     "/bin",
     "/dist",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "standard": {
-    "ignore": [
-      "sample.js"
-    ]
-  },
   "dependencies": {
     "@oclif/core": "^2",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^3.5.0",
-    "jsdoc-parse": "^6.2.0"
+    "@oclif/plugin-plugins": "^3.8.0"
   },
   "devDependencies": {
-    "@oclif/test": "^2.5.3",
+    "@oclif/test": "^2.5.5",
     "@types/chai": "^4",
     "@types/mocha": "^9.0.0",
-    "@types/node": "^16.18.50",
+    "@types/node": "^16.18.53",
     "chai": "^4",
     "eslint": "^7.32.0",
     "eslint-config-oclif": "^4",
     "eslint-config-oclif-typescript": "^1.0.3",
     "mocha": "^9",
-    "nock": "^13.3.3",
-    "oclif": "^3.15.0",
+    "oclif": "^3.17.1",
     "shx": "^0.3.3",
     "ts-node": "^10.9.1",
     "tslib": "^2.6.2",
@@ -61,8 +54,7 @@
   },
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
-    "lint": "eslint .",
-    "lint2": "eslint . --ext .ts --config .eslintrc.js",
+    "lint": "eslint . --ext .ts --config .eslintrc",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "yarn lint",
     "prepack": "yarn build && oclif manifest && oclif readme",
@@ -72,7 +64,7 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "bugs": "https://github.com/Workspace/cattal/issues",
+  "bugs": "https://github.com/aydeaver/cattal/issues",
   "keywords": [
     "oclif"
   ],

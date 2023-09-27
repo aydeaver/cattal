@@ -1,6 +1,11 @@
-cattal - IAC automation and analysis tool
+oclif-hello-world
 =================
 
+oclif example Hello World CLI
+
+[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+[![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/hello-world/tree/main)
+[![GitHub license](https://img.shields.io/github/license/oclif/hello-world)](https://github.com/oclif/hello-world/blob/main/LICENSE)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -13,7 +18,7 @@ $ npm install -g cattal
 $ cattal COMMAND
 running command...
 $ cattal (--version)
-cattal/0.0.1 linux-x64 node-v18.13.0
+cattal/0.0.0 linux-x64 node-v18.13.0
 $ cattal --help [COMMAND]
 USAGE
   $ cattal COMMAND
@@ -22,12 +27,6 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`cattal cattal`](#cattal-cattal)
-* [`cattal cattal help`](#cattal-cattal-help)
-* [`cattal cattal list`](#cattal-cattal-list)
-* [`cattal cattal task [TASK]`](#cattal-cattal-task-task)
-* [`cattal hello PERSON`](#cattal-hello-person)
-* [`cattal hello world`](#cattal-hello-world)
 * [`cattal help [COMMANDS]`](#cattal-help-commands)
 * [`cattal plugins`](#cattal-plugins)
 * [`cattal plugins:install PLUGIN...`](#cattal-pluginsinstall-plugin)
@@ -38,120 +37,6 @@ USAGE
 * [`cattal plugins:uninstall PLUGIN...`](#cattal-pluginsuninstall-plugin-1)
 * [`cattal plugins:uninstall PLUGIN...`](#cattal-pluginsuninstall-plugin-2)
 * [`cattal plugins update`](#cattal-plugins-update)
-
-## `cattal cattal`
-
-Say hello
-
-```
-USAGE
-  $ cattal cattal
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ cattal task -d <path to tasks>
-```
-
-_See code: [dist/commands/cattal/index.ts](https://github.com/Workspace/cattal/blob/v0.0.1/dist/commands/cattal/index.ts)_
-
-## `cattal cattal help`
-
-Display Cattal Help
-
-```
-USAGE
-  $ cattal cattal help
-
-DESCRIPTION
-  Display Cattal Help
-
-EXAMPLES
-  $ cattal cattal help
-  hello world! (./src/commands/hello/world.ts)
-```
-
-_See code: [dist/commands/cattal/help.ts](https://github.com/Workspace/cattal/blob/v0.0.1/dist/commands/cattal/help.ts)_
-
-## `cattal cattal list`
-
-describe the command here
-
-```
-USAGE
-  $ cattal cattal list [-d <value>]
-
-FLAGS
-  -d, --dir=<value>  Where to load tasks from
-
-DESCRIPTION
-  describe the command here
-```
-
-_See code: [dist/commands/cattal/list.ts](https://github.com/Workspace/cattal/blob/v0.0.1/dist/commands/cattal/list.ts)_
-
-## `cattal cattal task [TASK]`
-
-describe the command here
-
-```
-USAGE
-  $ cattal cattal task [TASK] [-d <value>]
-
-ARGUMENTS
-  TASK  a specific task to run
-
-FLAGS
-  -d, --dir=<value>  Where to load tasks from
-
-DESCRIPTION
-  describe the command here
-```
-
-_See code: [dist/commands/cattal/task.ts](https://github.com/Workspace/cattal/blob/v0.0.1/dist/commands/cattal/task.ts)_
-
-## `cattal hello PERSON`
-
-Say hello
-
-```
-USAGE
-  $ cattal hello PERSON -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Who is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [dist/commands/hello/index.ts](https://github.com/Workspace/cattal/blob/v0.0.1/dist/commands/hello/index.ts)_
-
-## `cattal hello world`
-
-Say hello world
-
-```
-USAGE
-  $ cattal hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ cattal hello world
-  hello world! (./src/commands/hello/world.ts)
-```
-
-_See code: [dist/commands/hello/world.ts](https://github.com/Workspace/cattal/blob/v0.0.1/dist/commands/hello/world.ts)_
 
 ## `cattal help [COMMANDS]`
 
@@ -194,7 +79,7 @@ EXAMPLES
   $ cattal plugins
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.5.0/src/commands/plugins/index.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.8.0/src/commands/plugins/index.ts)_
 
 ## `cattal plugins:install PLUGIN...`
 
@@ -259,7 +144,7 @@ EXAMPLES
   $ cattal plugins:inspect myplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.5.0/src/commands/plugins/inspect.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.8.0/src/commands/plugins/inspect.ts)_
 
 ## `cattal plugins:install PLUGIN...`
 
@@ -299,7 +184,7 @@ EXAMPLES
   $ cattal plugins:install someuser/someplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.5.0/src/commands/plugins/install.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.8.0/src/commands/plugins/install.ts)_
 
 ## `cattal plugins:link PLUGIN`
 
@@ -328,7 +213,7 @@ EXAMPLES
   $ cattal plugins:link myplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.5.0/src/commands/plugins/link.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.8.0/src/commands/plugins/link.ts)_
 
 ## `cattal plugins:uninstall PLUGIN...`
 
@@ -376,7 +261,7 @@ ALIASES
   $ cattal plugins remove
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.5.0/src/commands/plugins/uninstall.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.8.0/src/commands/plugins/uninstall.ts)_
 
 ## `cattal plugins:uninstall PLUGIN...`
 
@@ -417,28 +302,5 @@ DESCRIPTION
   Update installed plugins.
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.5.0/src/commands/plugins/update.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.8.0/src/commands/plugins/update.ts)_
 <!-- commandsstop -->
-* [`cattal task`](#cattal-task)
-* [`cattal task [TASK]`](#cattal-task-name)
-* [`cattal list [COMMANDS]`](#cattal-list)
-* [`cattal help`](#cattal-help)
-
-## `cattal list`
-
-list tasks
-
-```
-USAGE
-  $ cattal list -d <path_to_tasks>
-
-FLAGS
-  -d  (optional) Where the tasks to be executed are located, defaults to `pwd`
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ cattal list
-  taks_simple
-```

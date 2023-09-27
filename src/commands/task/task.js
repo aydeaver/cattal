@@ -1,13 +1,17 @@
 import { Args, Command, Flags } from '@oclif/core'
 import * as path from 'path'
-import { Parser } from '../../classes/Parser'
-import { TaskProcessor } from '../../classes/TaskProcessor'
+import { Parser } from '../../classes/Parser.js'
+import { TaskProcessor } from '../../classes/TaskProcessor.js'
 
 const processor = new TaskProcessor()
 const taskDirectory = path.resolve() + '/tasks'
 
 export default class Task extends Command {
-  static description = 'describe the command here'
+  static description = 'executes single or list of tasks defined in a JS file'
+
+  static examples = [
+    `<%= config.bin %> <%= command.id %>`,
+  ]
 
   static flags = {
     dir: Flags.string({ char: 'd', description: 'Where to load tasks from' })
@@ -29,9 +33,9 @@ export default class Task extends Command {
       processor.handler(args.task, task)
     } else {
       const list = parser.getTasks()
-      list.forEach((i) => {
-        console.log(i.name)
-        processor.handler(i.name, parser.getTaskDef(i.name))
+      list.forEach((iter) => {
+        // console.log(iter.name)
+        processor.handler(iter.name, parser.getTaskDef(iter.name))
       })
     }
   }
